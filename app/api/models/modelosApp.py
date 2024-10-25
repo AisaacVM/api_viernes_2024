@@ -20,28 +20,27 @@ class Usuario(Base):
 
 #GASTO
 class Gasto(Base):
-    #id
-    #monto
-    #fecha
-    #descripcion
-    #nombre
-    pass
+    __tablename__='gastos'
+    id= Column(Integer, primary_key=True, autoincrement=True)
+    monto= Column(Integer)
+    fecha= Column(Date)
+    descripcion= Column(String(100))
+    nombre= Column(String(10))
+    
 
 #CATEGORIA
 class Categoria(Base):
-    pass
-    #id
-    #nombreCategoria
-    #descripcion
-    #fotoicono
+    __tablename__='categorias'
+    id = Column(Integer,primary_key=True, autoincrement=True)
+    nombreCategoria= Column(String(30))
+    descripcion= Column(String(50))
+    fotoicono= Column(String(100))
 
+    
 #METODOS DE PAGO
 class MetodoPago(Base):
-    pass
-    #id
-    #nombreMetodo
-    #descripcion
+    __tablename__='metodopagos'
+    id=Column(Integer,primary_key=True, autoincrement=True)
+    nombreMetodo= Column(String(30))
+    descripcion= Column(String(70))
 
-#FACTURA
-class Factura(Base):
-    pass
